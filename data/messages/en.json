@@ -1,0 +1,200 @@
+{
+  "nav": {
+    "services": "Services",
+    "process": "Process",
+    "work": "Work",
+    "whyUs": "Why Us",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "cta": "Start a Project"
+  },
+  "hero": {
+    "tagline": "Grow Smarter. Go Epic.",
+    "badge": "Digital Agency • Dhaka to Worldwide",
+    "headline": "Engineering Digital Growth for Ambitious Brands.",
+    "subheadline": "We build fast modern websites, launch high-ROI advertising campaigns, and amplify brands across international markets with dedicated remote agility.",
+    "primaryCta": "Start a Project",
+    "secondaryCta": "View Our Work",
+    "locationBadge": "Dhaka, Bangladesh — Serving Clients Globally",
+    "canvasHint": "Interactive 3D space • Move cursor or touch to rotate"
+  },
+  "services": {
+    "badge": "Capabilities",
+    "title": "Comprehensive Digital Solutions Under One Roof",
+    "subtitle": "No fragmented freelancers or disconnected vendors. We bridge technical software craftsmanship with data-driven marketing.",
+    "items": [
+      {
+        "id": "web-dev",
+        "title": "Web & Software Development",
+        "description": "High-performance bespoke web applications, modern e-commerce stores, and custom software engineered for speed, conversion, and scalability.",
+        "tags": ["Next.js", "React", "TypeScript", "Tailwind CSS", "APIs"]
+      },
+      {
+        "id": "seo",
+        "title": "Search Engine Optimization (SEO)",
+        "description": "Technical search architecture, keyword clustering, and on-page optimization designed to capture high-intent search traffic organically.",
+        "tags": ["Technical SEO", "On-Page", "Core Web Vitals", "Structured Data"]
+      },
+      {
+        "id": "digital-ads",
+        "title": "Digital Advertising (Meta & Google)",
+        "description": "Targeted ad campaigns on Google Search, Meta (Facebook & Instagram), and YouTube optimized for direct customer acquisition and measurable ROI.",
+        "tags": ["Meta Ads", "Google Ads", "Retargeting", "Conversion Tracking"]
+      },
+      {
+        "id": "digital-marketing",
+        "title": "Digital Marketing",
+        "description": "Full-funnel digital marketing strategies, conversion rate optimization (CRO), and content frameworks that nurture prospects into long-term customers.",
+        "tags": ["Growth Strategy", "CRO", "Funnel Optimization", "Analytics"]
+      },
+      {
+        "id": "brand-identity",
+        "title": "Brand Identity",
+        "description": "Distinct visual identities, logo marks, typographic systems, and digital style guides that build instant credibility in competitive markets.",
+        "tags": ["Visual Systems", "Logo Design", "Style Guides", "Asset Kits"]
+      }
+    ]
+  },
+  "process": {
+    "badge": "Methodology",
+    "title": "A Transparent, Predictable 5-Step Process",
+    "subtitle": "How we take ideas from discovery to measurable impact with clear milestones.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Discover",
+        "description": "We dive into your business goals, target audience, competitive landscape, and key performance metrics to establish project clarity."
+      },
+      {
+        "number": "02",
+        "title": "Plan",
+        "description": "We map information architecture, technical specifications, project scopes, sprint deliverables, and realistic timelines."
+      },
+      {
+        "number": "03",
+        "title": "Design & Develop",
+        "description": "Iterative design mockups and production-grade software development with clean code, responsive testing, and regular progress updates."
+      },
+      {
+        "number": "04",
+        "title": "Launch",
+        "description": "Thorough QA, performance auditing, DNS configuration, tracking script deployment, and seamless production rollout."
+      },
+      {
+        "number": "05",
+        "title": "Measure & Improve",
+        "description": "Post-launch analytics review, performance monitoring, continuous optimization, and proactive feature enhancements."
+      }
+    ]
+  },
+  "work": {
+    "badge": "Showcase",
+    "title": "See our work",
+    "subtitle": "Explore our live demos, client productions, and technical capabilities on our dedicated showcase platform.",
+    "cta": "Browse Our Work",
+    "url": "https://work.epicoptimize.com"
+  },
+  "whyUs": {
+    "badge": "Why Epic Optimize",
+    "title": "Engineered for Reliability and Real Results",
+    "subtitle": "What international founders and business leaders value when collaborating with our Dhaka team.",
+    "reasons": [
+      {
+        "id": "mobile-first",
+        "title": "Mobile-First Architecture",
+        "description": "Over 75% of your buyers browse on phones. Every pixel and layout is drafted and tested for thumb-friendly mobile interactions."
+      },
+      {
+        "id": "fast-performance",
+        "title": "Lightning-Fast Performance",
+        "description": "We optimize Core Web Vitals, minimize bundle weights, and leverage edge caching so your pages load in fractions of a second."
+      },
+      {
+        "id": "single-partner",
+        "title": "One Unified Partner",
+        "description": "No friction between coders and marketers. Your development, SEO, advertising, and brand assets speak the exact same language."
+      },
+      {
+        "id": "clear-comms",
+        "title": "Transparent Communication",
+        "description": "No tech jargon smoke-and-mirrors. Weekly async sprint check-ins, recorded Loom walk-throughs, and prompt WhatsApp & email communication."
+      },
+      {
+        "id": "remote-collab",
+        "title": "Remote International Collaboration",
+        "description": "Experienced in asynchronous remote delivery with clients worldwide, providing comfortable timezone overlap and agile turnarounds."
+      }
+    ]
+  },
+  "faq": {
+    "badge": "Common Questions",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Clear, direct answers about working with Epic Optimize.",
+    "items": [
+      {
+        "q": "How does a new project start?",
+        "a": "It begins with a free initial discovery discussion via email or WhatsApp. We review your requirements, target audience, and current digital state. Within 48 hours, we provide a clear proposal with scope, milestone breakdown, and transparent pricing."
+      },
+      {
+        "q": "How do you handle working across different time zones?",
+        "a": "Our studio is based in Dhaka (GMT+6 / BST), which naturally overlaps with Asia-Pacific morning hours, European & Gulf mid-days, and North American morning/evening handoffs. We rely on clear asynchronous documentation, sprint boards, and scheduled video syncs when required."
+      },
+      {
+        "q": "What do you need from our team before starting?",
+        "a": "Basic brand assets (logo, colors if available), a brief description of your offer or products, access to any existing hosting or domain accounts, and a designated project lead on your side for milestone sign-offs."
+      },
+      {
+        "q": "Can you improve or redesign our existing website?",
+        "a": "Yes. We frequently conduct deep audits of existing websites to diagnose slow loading speeds, poor conversion funnels, outdated code, or broken SEO architecture, and then systematically rebuild or optimize them."
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Get In Touch",
+    "title": "Let's Build Something Exceptional Together",
+    "subtitle": "Tell us about your project, goals, and timeline. We'll review and respond with concrete next steps.",
+    "responseTimePlaceholder": "[EDITABLE NOTE] Typical response time: Within 12-24 hours on business days (Dhaka Time, GMT+6).",
+    "form": {
+      "nameLabel": "Your Name",
+      "namePlaceholder": "e.g., Alex Rahman",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "alex@company.com",
+      "companyLabel": "Company / Brand (Optional)",
+      "companyPlaceholder": "e.g., Acme Studio",
+      "serviceLabel": "Primary Service Needed",
+      "serviceDefault": "Select a service...",
+      "messageLabel": "Project Details & Goals",
+      "messagePlaceholder": "Tell us about what you want to build, target launch date, and specific goals...",
+      "submitBtn": "Send Project Inquiry",
+      "sending": "Sending Inquiry...",
+      "successTitle": "Message Received!",
+      "successDesc": "Thank you for reaching out. We will review your project brief and get back to you shortly.",
+      "errorTitle": "Unable to send message",
+      "errorDesc": "Please try again or email us directly at epicoptimize@gmail.com."
+    },
+    "direct": {
+      "email": "epicoptimize@gmail.com",
+      "phone": "+880 1987-363537",
+      "whatsappLabel": "Chat on WhatsApp",
+      "address": "Orbit Mustakim Tower, Jatrabari, Dhaka 1236, Bangladesh",
+      "office": "Dhaka Studio"
+    }
+  },
+  "footer": {
+    "tagline": "Grow Smarter. Go Epic.",
+    "description": "Modern digital agency based in Dhaka, Bangladesh, engineering web apps, search dominance, and high-impact digital campaigns for global clients.",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "trustNote": "Honest engineering, zero inflated vanity metrics."
+  },
+  "legal": {
+    "privacyTitle": "Privacy Policy",
+    "privacyUpdated": "Last updated: October 2026",
+    "privacyContent": "Epic Optimize values client privacy. Any information submitted via our contact channels (including email, company name, and project specifications) is used strictly for consultation, project scoping, and communication. We do not sell, rent, or distribute client contact details to third parties. For questions, contact epicoptimize@gmail.com.",
+    "termsTitle": "Terms of Service",
+    "termsUpdated": "Last updated: October 2026",
+    "termsContent": "All client engagements with Epic Optimize are governed by written scope agreements and statement of work (SOW) documents detailing deliverables, milestones, and payment schedules. Custom work delivered upon full payment belongs entirely to the client. Contact epicoptimize@gmail.com for questions.",
+    "close": "Close"
+  }
+}

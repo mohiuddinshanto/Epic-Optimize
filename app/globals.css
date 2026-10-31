@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg-page: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-card-subtle: #f1f5f9;
+  --border-subtle: #e2e8f0;
+  --border-hover: #cbd5e1;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --accent: #0284c7;
+  --accent-glow: rgba(2, 132, 199, 0.15);
+  --section-alt-bg: #f8fafc;
+}
+
+.dark {
+  --bg-page: #07090e;
+  --bg-card: #0d121c;
+  --bg-card-subtle: #111827;
+  --border-subtle: #1e293b;
+  --border-hover: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.2);
+  --section-alt-bg: #090d15;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+}
+
+html[lang="bn"],
+.locale-bn {
+  font-family: 'Hind Siliguri', 'Plus Jakarta Sans', system-ui, sans-serif;
+  line-height: 1.75;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-bangla {
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+/* Theme Utilities */
+.card-theme {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+}
+
+.card-theme-hover:hover {
+  border-color: var(--border-hover);
+}
+
+.section-alt {
+  background-color: var(--section-alt-bg);
+}
+
+.text-theme-primary {
+  color: var(--text-primary);
+}
+
+.text-theme-secondary {
+  color: var(--text-secondary);
+}
+
+.text-theme-muted {
+  color: var(--text-muted);
+}
