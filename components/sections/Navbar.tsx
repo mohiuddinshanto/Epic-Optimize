@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Sun, Moon, Laptop, Menu, X, ArrowUpRight, ExternalLink } from 'lucide-react';
 import { useLocale } from '../../context/LocaleContext';
 import { useTheme } from '../../context/ThemeContext';
@@ -65,9 +66,14 @@ export const Navbar: React.FC = () => {
             href="#"
             className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-lg p-1"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-xl tracking-tighter shadow-md shadow-cyan-500/20 group-hover:scale-105 transition-transform">
-              EO
-            </div>
+            <Image
+              src="/epic.png"
+              alt="Epic Optimize logo"
+              width={40}
+              height={40}
+              priority
+              className="w-10 h-10 rounded-xl bg-white object-contain p-0.5 shadow-md shadow-cyan-500/20 group-hover:scale-105 transition-transform"
+            />
             <div className="flex flex-col">
               <span className="font-display font-bold text-lg tracking-tight text-theme-primary leading-none">
                 Epic Optimize

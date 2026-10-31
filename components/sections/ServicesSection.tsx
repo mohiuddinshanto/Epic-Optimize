@@ -120,7 +120,7 @@ export const ServicesSection: React.FC = () => {
                 isFeatured={isFeatured}
                 className={
                   isFeatured
-                    ? 'md:col-span-2 lg:col-span-2 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 text-white border border-cyan-500/30 shadow-xl shadow-cyan-950/20 hover:shadow-cyan-500/20'
+                    ? 'md:col-span-2 lg:col-span-2 bg-gradient-to-br from-white via-white to-cyan-50 text-slate-900 border border-cyan-500/30 shadow-xl shadow-cyan-950/10 hover:shadow-cyan-500/20 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950 dark:text-white dark:shadow-cyan-950/20'
                     : 'card-theme card-theme-hover shadow-sm hover:shadow-xl hover:shadow-cyan-500/10'
                 }
               >
@@ -135,7 +135,7 @@ export const ServicesSection: React.FC = () => {
                             transition: 'transform 0.15s ease-out',
                           }}
                           className={`p-3 rounded-xl shadow-sm ${
-                            isFeatured ? 'bg-cyan-500/20 text-cyan-300' : 'bg-[var(--bg-card-subtle)] text-cyan-500'
+                            isFeatured ? 'bg-cyan-500/10 text-cyan-700 dark:bg-cyan-500/20 dark:text-cyan-300' : 'bg-[var(--bg-card-subtle)] text-cyan-500'
                           }`}
                         >
                           {getServiceIcon(service.id)}
@@ -152,7 +152,7 @@ export const ServicesSection: React.FC = () => {
                       {/* Content */}
                       <h3
                         className={`font-display text-xl font-bold mb-3 ${
-                          isFeatured ? 'text-white' : 'text-theme-primary'
+                          isFeatured ? 'text-slate-900 dark:text-white' : 'text-theme-primary'
                         }`}
                       >
                         {service.title}
@@ -160,7 +160,7 @@ export const ServicesSection: React.FC = () => {
 
                       <p
                         className={`text-sm leading-relaxed mb-6 ${
-                          isFeatured ? 'text-slate-300' : 'text-theme-secondary'
+                          isFeatured ? 'text-slate-600 dark:text-slate-300' : 'text-theme-secondary'
                         }`}
                       >
                         {service.description}
@@ -174,7 +174,7 @@ export const ServicesSection: React.FC = () => {
                           key={tag}
                           className={`text-xs px-2.5 py-1 rounded-md font-medium ${
                             isFeatured
-                              ? 'bg-slate-800 text-cyan-200'
+                              ? 'bg-cyan-100 text-cyan-800 dark:bg-slate-800 dark:text-cyan-200'
                               : 'bg-[var(--bg-card-subtle)] text-theme-secondary'
                           }`}
                         >

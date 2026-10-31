@@ -175,11 +175,11 @@ export const ContactSection: React.FC = () => {
             </div>
 
             {/* International Remote Collaboration Guarantee */}
-            <div className="bg-gradient-to-br from-slate-900 to-slate-950 text-white p-6 rounded-2xl border border-slate-800 shadow-md">
-              <h4 className="font-display font-bold text-sm tracking-wide text-cyan-400 uppercase mb-2">
+            <div className="bg-gradient-to-br from-white to-cyan-50 text-theme-primary p-6 rounded-2xl border border-[var(--border-subtle)] shadow-md dark:from-slate-900 dark:to-slate-950 dark:border-slate-800">
+              <h4 className="font-display font-bold text-sm tracking-wide text-cyan-700 dark:text-cyan-400 uppercase mb-2">
                 International Working Protocol
               </h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
+              <p className="text-xs text-theme-secondary leading-relaxed">
                 Whether you are in North America, the UK, Europe, Australia, or the Gulf, our Dhaka team structures daily async updates, milestones, and video handoffs around your business hours.
               </p>
             </div>
