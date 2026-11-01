@@ -45,10 +45,6 @@ export const LocaleProvider: React.FC<LocaleProviderProps> = ({ children, initia
         if (urlLang === 'bn' || urlLang === 'en') detectedLocale = urlLang;
       }
 
-      if (!detectedLocale && new URLSearchParams(window.location.search).get('country')?.toUpperCase() === 'BD') {
-        detectedLocale = 'bn';
-      }
-
       if (!detectedLocale) {
         const cookieLocale = document.cookie.match(/(?:^|; )NEXT_LOCALE=(bn|en)(?:;|$)/)?.[1];
         if (cookieLocale === 'bn' || cookieLocale === 'en') detectedLocale = cookieLocale;

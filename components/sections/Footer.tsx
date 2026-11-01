@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Globe2, ArrowUp, ExternalLink } from 'lucide-react';
+import { ArrowUp, ExternalLink } from 'lucide-react';
 import { useLocale } from '../../context/LocaleContext';
 import { companyInfo } from '../../data/company';
 import { LegalModal } from '../ui/LegalModal';
 
 export const Footer: React.FC = () => {
-  const { t, locale, setLocale } = useLocale();
+  const { t } = useLocale();
   const [legalModalType, setLegalModalType] = useState<'privacy' | 'terms' | null>(null);
 
   const scrollToTop = () => {
@@ -120,34 +120,6 @@ export const Footer: React.FC = () => {
                 </p>
               </div>
 
-              {/* Dev Testing Tool for ?country=BD */}
-              <div className="p-3.5 rounded-xl bg-[var(--bg-card-subtle)] border border-[var(--border-subtle)] text-xs space-y-1.5">
-                <div className="flex items-center gap-1.5 font-medium text-cyan-700 dark:text-cyan-300">
-                  <Globe2 className="w-3.5 h-3.5" />
-                  <span>Geo-Routing Dev Simulator</span>
-                </div>
-                <p className="text-[11px] text-theme-secondary">
-                  Simulate Vercel header <code className="text-cyan-700 dark:text-cyan-200">x-vercel-ip-country: BD</code>:
-                </p>
-                <div className="flex gap-2 pt-1">
-                  <button
-                    onClick={() => setLocale('bn')}
-                    className={`px-2.5 py-1 rounded text-[11px] font-semibold cursor-pointer ${
-                      locale === 'bn' ? 'bg-cyan-500 text-white' : 'bg-[var(--bg-card)] text-theme-secondary hover:bg-[var(--border-subtle)]'
-                    }`}
-                  >
-                    Simulate BD (?country=BD)
-                  </button>
-                  <button
-                    onClick={() => setLocale('en')}
-                    className={`px-2.5 py-1 rounded text-[11px] font-semibold cursor-pointer ${
-                      locale === 'en' ? 'bg-cyan-500 text-white' : 'bg-[var(--bg-card)] text-theme-secondary hover:bg-[var(--border-subtle)]'
-                    }`}
-                  >
-                    Simulate Global / EN
-                  </button>
-                </div>
-              </div>
             </div>
           </div>
 

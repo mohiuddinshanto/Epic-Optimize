@@ -13,8 +13,8 @@ const BOT_USER_AGENTS = [
   'slackbot',
 ];
 
-export function middleware(request: NextRequest) {
-  const { pathname, searchParams } = request.nextUrl;
+export async function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
 
   // 1. Skip static assets, internal Next.js chunks, images, and API routes
   if (
@@ -50,15 +50,41 @@ export function middleware(request: NextRequest) {
     );
   }
 
-  // 5. Local Dev & Testing Override:
-  const countryParam = searchParams.get('country')?.toUpperCase();
-  const envSimulatedCountry = process.env.SIMULATE_COUNTRY?.toUpperCase();
+  // 5. Detect country from the hosting platform, then fall back to IP geolocation.
+  // Hostinger CDN provides the visitor address in X-Real-IP, not a country header.
   const vercelCountry = request.headers.get('x-vercel-ip-country')?.toUpperCase();
-  const detectedCountry = countryParam || envSimulatedCountry || vercelCountry;
+  let detectedCountry = vercelCountry;
+
+  if (!detectedCountry) {
+    const clientIp = request.headers.get('x-real-ip')?.trim();
+    if (clientIp) {
+      try {
+        const geoResponse = await fetch(`https://ipwho.is/${encodeURIComponent(clientIp)}`, {
+          headers: { accept: 'application/json' },
+          signal: AbortSignal.timeout(1500),
+          cache: 'no-store',
+        });
+        if (geoResponse.ok) {
+          const geoData = (await geoResponse.json()) as { success?: boolean; country_code?: string };
+          if (geoData.success && geoData.country_code) {
+            detectedCountry = geoData.country_code.toUpperCase();
+          }
+        }
+      } catch {
+        // Geolocation is best-effort; use the browser language if the lookup fails.
+      }
+    }
+  }
 
   if (detectedCountry === 'BD') {
     return NextResponse.redirect(
       new URL(`/bn${pathname === '/' ? '' : pathname}`, request.url)
+    );
+  }
+
+  if (detectedCountry) {
+    return NextResponse.redirect(
+      new URL(`/en${pathname === '/' ? '' : pathname}`, request.url)
     );
   }
 
