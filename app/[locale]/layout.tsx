@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import './globals.css';
-import { AppProviders } from '../components/providers/AppProviders';
+import '../globals.css';
 
 export const viewport: Viewport = {
   themeColor: [
@@ -13,24 +12,26 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://epicoptimize.com'),
-  title: 'Epic Optimize | Grow Smarter. Go Epic. — Digital Agency',
+  title: 'Epic Optimize | Web Development, SEO & Digital Marketing in Dhaka',
   description:
-    'Epic Optimize is a modern digital agency in Dhaka, Bangladesh serving global clients. Web & Software Development, SEO, Digital Advertising, Marketing & Brand Identity.',
+    'Epic Optimize is a Dhaka, Bangladesh digital agency delivering web and software development, SEO, digital advertising, and brand identity for businesses worldwide.',
   keywords: [
-    'Digital Agency Dhaka',
-    'Web Development Bangladesh',
-    'Next.js Agency',
-    'SEO Agency Dhaka',
-    'Meta Ads Agency',
-    'Google Ads Specialist',
-    'Full Stack Software Development',
     'Epic Optimize',
+    'Epic Optimize Bangladesh',
+    'Epic Optimize Dhaka',
+    'digital agency Dhaka',
+    'web development Bangladesh',
+    'software development Dhaka',
+    'SEO agency Bangladesh',
+    'digital marketing agency Dhaka',
+    'Google Ads agency Bangladesh',
+    'Meta Ads agency Bangladesh',
   ],
   authors: [{ name: 'Epic Optimize', url: 'https://epicoptimize.com' }],
   creator: 'Epic Optimize',
   publisher: 'Epic Optimize',
   alternates: {
-    canonical: 'https://epicoptimize.com',
+    canonical: 'https://epicoptimize.com/en',
     languages: {
       en: '/en',
       bn: '/bn',
@@ -41,18 +42,21 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     alternateLocale: 'bn_BD',
-    url: 'https://epicoptimize.com',
-    title: 'Epic Optimize | Grow Smarter. Go Epic. — Digital Agency',
+    url: 'https://epicoptimize.com/en',
+    title: 'Epic Optimize | Web Development, SEO & Digital Marketing in Dhaka',
     description:
-      'Modern digital agency in Dhaka, Bangladesh serving global clients. Web & Software Development, SEO, Digital Advertising, and Brand Identity.',
+      'Web development, software, SEO, digital advertising, and brand identity from Epic Optimize in Dhaka, serving businesses worldwide.',
     siteName: 'Epic Optimize',
+    images: [{ url: '/epic.png', alt: 'Epic Optimize logo' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Epic Optimize | Grow Smarter. Go Epic.',
+    title: 'Epic Optimize | Web Development, SEO & Digital Marketing in Dhaka',
     description:
-      'Digital agency in Dhaka, Bangladesh for international clients. Web development, SEO, advertising, and branding.',
+      'Web development, software, SEO, digital advertising, and brand identity from Dhaka, Bangladesh.',
+    images: ['/epic.png'],
   },
+  icons: { icon: '/epic.png' },
   robots: {
     index: true,
     follow: true,
@@ -73,6 +77,9 @@ const jsonLd = {
   alternateName: 'এপিক অপটিমাইজ',
   slogan: 'Grow Smarter. Go Epic.',
   url: 'https://epicoptimize.com',
+  logo: 'https://epicoptimize.com/epic.png',
+  description:
+    'Digital agency in Dhaka, Bangladesh specializing in web and software development, SEO, digital advertising, marketing, and brand identity.',
   email: 'epicoptimize@gmail.com',
   telephone: '+8801987363537',
   address: {
@@ -92,13 +99,17 @@ const jsonLd = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
+
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang={locale === 'bn' ? 'bn' : 'en'} className="dark" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -107,12 +118,17 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <script
+          dangerouslySetInnerHTML={{
+            __html: "try { if (localStorage.getItem('epic_theme') === 'light') document.documentElement.classList.remove('dark'); } catch (_) {}",
+          }}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body className="min-h-screen bg-[var(--bg-page)] text-[var(--text-primary)] transition-colors duration-300 flex flex-col selection:bg-orange-500/30 selection:text-orange-200 relative">
-        <AppProviders>{children}</AppProviders>
+        {children}
       </body>
     </html>
   );

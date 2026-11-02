@@ -3013,7 +3013,8 @@ const i18nData = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  const localeFromUrl = new URLSearchParams(window.location.search).get('locale');
+  const localeFromUrl = new URLSearchParams(window.location.search).get('locale') ||
+    (/^\/(bn)(\/|$)/.test(window.location.pathname) ? 'bn' : /^\/(en)(\/|$)/.test(window.location.pathname) ? 'en' : null);
   const savedLocale = localStorage.getItem('epic_locale');
   const hasExplicitLocale = localStorage.getItem('epic_locale_explicit') === '1';
   let currentLocale = hasExplicitLocale && (savedLocale === 'bn' || savedLocale === 'en')

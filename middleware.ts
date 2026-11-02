@@ -26,12 +26,8 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // 2. Check if the path already starts with a supported locale
-  const pathnameIsMissingLocale =
-    !/^\/(en|bn)(\/|$)/.test(pathname);
-
-  // If already localized (e.g., /en or /bn), continue normally
-  if (!pathnameIsMissingLocale) {
+  // Continue normally when a supported locale is already in the path.
+  if (/^\/(en|bn)(\/|$)/.test(pathname)) {
     return NextResponse.next();
   }
 
@@ -71,7 +67,7 @@ export async function middleware(request: NextRequest) {
           }
         }
       } catch {
-        // Geolocation is best-effort; use the browser language if the lookup fails.
+        // Geolocation is best-effort; the fallback below sends visitors to English.
       }
     }
   }

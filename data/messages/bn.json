@@ -27,31 +27,57 @@
         "id": "web-dev",
         "title": "Web & Software Development",
         "description": "উচ্চগতির আধুনিক কাস্টম ওয়েব অ্যাপ্লিকেশন, ই-কমার্স স্টোর এবং স্কেলেবল সফটওয়্যার যা রূপান্তর ও পারফরম্যান্সকে সর্বাধিক গুরুত্ব দেয়।",
-        "tags": ["Next.js", "React", "TypeScript", "Tailwind CSS", "APIs"]
+        "tags": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "APIs"
+        ]
       },
       {
         "id": "seo",
         "title": "Search Engine Optimization (SEO)",
         "description": "টেকনিক্যাল সার্চ আর্কিটেকচার, কি-ওয়ার্ড ক্লাস্টারিং এবং অন-পেজ অপটিমাইজেশন—যা গুগল অর্গানিক সার্চ থেকে লক্ষ্যভিত্তিক ট্রাফিক নিয়ে আসে।",
-        "tags": ["Technical SEO", "On-Page", "Core Web Vitals", "Structured Data"]
+        "tags": [
+          "Technical SEO",
+          "On-Page",
+          "Core Web Vitals",
+          "Structured Data"
+        ]
       },
       {
         "id": "digital-ads",
         "title": "Digital Advertising (Meta & Google)",
         "description": "গুগল সার্চ ও মেটা (ফেসবুক ও ইনস্টাগ্রাম) প্ল্যাটফর্মে নির্ভুল লক্ষ্যভিত্তিক বিজ্ঞাপন ক্যাম্পেইন যা নিশ্চিত করে সর্বোচ্চ আরওআই (ROI)।",
-        "tags": ["Meta Ads", "Google Ads", "Retargeting", "Conversion Tracking"]
+        "tags": [
+          "Meta Ads",
+          "Google Ads",
+          "Retargeting",
+          "Conversion Tracking"
+        ]
       },
       {
         "id": "digital-marketing",
         "title": "Digital Marketing",
         "description": "ফুল-ফানেল ডিজিটাল মার্কেটিং কৌশল ও কনভার্সন অপটিমাইজেশন, যা ভিজিটরদের দীর্ঘমেয়াদী গ্রাহকে রূপান্তর করতে সাহায্য করে।",
-        "tags": ["Growth Strategy", "CRO", "Funnel Optimization", "Analytics"]
+        "tags": [
+          "Growth Strategy",
+          "CRO",
+          "Funnel Optimization",
+          "Analytics"
+        ]
       },
       {
         "id": "brand-identity",
         "title": "Brand Identity",
         "description": "আকর্ষণীয় ব্র্যান্ড আইডেন্টিটি, আধুনিক লোগো মার্ক, টাইপোগ্রাফিক সিস্টেম এবং স্টাইল গাইড যা বাজারে বিশ্বাসযোগ্যতা তৈরি করে।",
-        "tags": ["Visual Systems", "Logo Design", "Style Guides", "Asset Kits"]
+        "tags": [
+          "Visual Systems",
+          "Logo Design",
+          "Style Guides",
+          "Asset Kits"
+        ]
       }
     ]
   },

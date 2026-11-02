@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 import { ReferenceDesignPage } from '../../components/sections/ReferenceDesignPage';
 
 interface PageProps {
@@ -9,6 +10,42 @@ interface PageProps {
 
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'bn' }];
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { locale } = await params;
+  if (locale !== 'en' && locale !== 'bn') notFound();
+
+  const isBangla = locale === 'bn';
+  const title = isBangla
+    ? 'এপিক অপটিমাইজ | ঢাকা, বাংলাদেশে ওয়েব ডেভেলপমেন্ট, SEO ও ডিজিটাল মার্কেটিং'
+    : 'Epic Optimize | Web Development, SEO & Digital Marketing in Dhaka';
+  const description = isBangla
+    ? 'এপিক অপটিমাইজ ঢাকাভিত্তিক ডিজিটাল এজেন্সি। আমরা বিশ্বব্যাপী ব্যবসার জন্য ওয়েব ও সফটওয়্যার ডেভেলপমেন্ট, SEO, ডিজিটাল বিজ্ঞাপন এবং ব্র্যান্ড পরিচিতি তৈরি করি।'
+    : 'Epic Optimize is a Dhaka, Bangladesh digital agency delivering web and software development, SEO, digital advertising, and brand identity for businesses worldwide.';
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `https://epicoptimize.com/${locale}`,
+      languages: {
+        en: 'https://epicoptimize.com/en',
+        bn: 'https://epicoptimize.com/bn',
+        'x-default': 'https://epicoptimize.com/en',
+      },
+    },
+    openGraph: {
+      type: 'website',
+      locale: isBangla ? 'bn_BD' : 'en_US',
+      url: `https://epicoptimize.com/${locale}`,
+      title,
+      description,
+      siteName: 'Epic Optimize',
+      images: [{ url: '/epic.png', alt: 'Epic Optimize logo' }],
+    },
+    twitter: { card: 'summary_large_image', title, description, images: ['/epic.png'] },
+  };
 }
 
 export default async function LocalizedPage({ params }: PageProps) {
