@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { AgencyLandingPage } from '../../components/sections/AgencyLandingPage';
+import { ReferenceDesignPage } from '../../components/sections/ReferenceDesignPage';
 
 interface PageProps {
   params: Promise<{
@@ -18,5 +18,5 @@ export default async function LocalizedPage({ params }: PageProps) {
     notFound();
   }
 
-  return <AgencyLandingPage />;
+  return <ReferenceDesignPage locale={locale} />;
 }

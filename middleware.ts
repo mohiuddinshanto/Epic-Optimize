@@ -88,15 +88,8 @@ export async function middleware(request: NextRequest) {
     );
   }
 
-  // 6. Accept-Language header check
-  const acceptLanguage = request.headers.get('accept-language')?.toLowerCase() || '';
-  if (acceptLanguage.includes('bn') || acceptLanguage.includes('bengali')) {
-    return NextResponse.redirect(
-      new URL(`/bn${pathname === '/' ? '' : pathname}`, request.url)
-    );
-  }
-
-  // 7. Default fallback to /en for all international visitors
+  // If country detection is unavailable, default to English. Browser language
+  // alone does not indicate that a visitor is physically in Bangladesh.
   return NextResponse.redirect(
     new URL(`/en${pathname === '/' ? '' : pathname}`, request.url)
   );

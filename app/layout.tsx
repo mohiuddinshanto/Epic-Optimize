@@ -5,7 +5,7 @@ import { AppProviders } from '../components/providers/AppProviders';
 export const viewport: Viewport = {
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#f8fafc' },
-    { media: '(prefers-color-scheme: dark)', color: '#07090e' },
+    { media: '(prefers-color-scheme: dark)', color: '#0c0c0e' },
   ],
   width: 'device-width',
   initialScale: 1,
@@ -111,7 +111,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-[var(--bg-page)] text-[var(--text-primary)] transition-colors duration-300 flex flex-col selection:bg-cyan-500/30 selection:text-cyan-200 relative">
+      <body className="min-h-screen bg-[var(--bg-page)] text-[var(--text-primary)] transition-colors duration-300 flex flex-col selection:bg-orange-500/30 selection:text-orange-200 relative">
         <AppProviders>{children}</AppProviders>
       </body>
     </html>

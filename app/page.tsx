@@ -1,5 +1,5 @@
-import { AgencyLandingPage } from '../components/sections/AgencyLandingPage';
+import { ReferenceDesignPage } from '../components/sections/ReferenceDesignPage';
 
 export default function HomePage() {
-  return <AgencyLandingPage />;
+  return <ReferenceDesignPage />;
 }
