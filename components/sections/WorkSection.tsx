@@ -164,7 +164,7 @@ export const WorkSection: React.FC = () => {
               }}
             >
               <Layers className="w-3.5 h-3.5 text-cyan-500" />
-              <span>Live Showcase</span>
+              <span>{t.common.liveShowcase}</span>
             </div>
           </div>
         </div>

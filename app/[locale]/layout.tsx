@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import '../globals.css';
+import { AppProviders } from '../../components/providers/AppProviders';
 
 export const viewport: Viewport = {
   themeColor: [
@@ -128,7 +129,7 @@ export default async function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-[var(--bg-page)] text-[var(--text-primary)] transition-colors duration-300 flex flex-col selection:bg-orange-500/30 selection:text-orange-200 relative">
-        {children}
+        <AppProviders initialLocale={locale === 'bn' ? 'bn' : 'en'}>{children}</AppProviders>
       </body>
     </html>
   );

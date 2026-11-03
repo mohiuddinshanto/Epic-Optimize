@@ -79,7 +79,7 @@ export const Navbar: React.FC = () => {
                 Epic Optimize
               </span>
               <span className="text-[11px] font-medium text-cyan-500 tracking-wider uppercase mt-1">
-                Grow Smarter. Go Epic.
+                {t.hero.tagline}
               </span>
             </div>
           </a>
@@ -121,8 +121,8 @@ export const Navbar: React.FC = () => {
                     ? 'bg-cyan-500 text-white shadow-sm'
                     : 'text-theme-muted hover:text-theme-primary'
                 }`}
-                title="Switch to English"
-                aria-label="English"
+                title={t.common.switchToEnglish}
+                aria-label={t.common.switchToEnglish}
               >
                 EN
               </button>
@@ -133,8 +133,8 @@ export const Navbar: React.FC = () => {
                     ? 'bg-cyan-500 text-white shadow-sm font-bangla'
                     : 'text-theme-muted hover:text-theme-primary font-bangla'
                 }`}
-                title="বাংলায় পরিবর্তন করুন"
-                aria-label="Bangla"
+                title={t.common.switchToBangla}
+                aria-label={t.common.switchToBangla}
               >
                 বাংলা
               </button>
@@ -148,8 +148,8 @@ export const Navbar: React.FC = () => {
                 else setTheme('dark');
               }}
               className="p-2 rounded-full text-theme-secondary hover:text-cyan-500 bg-[var(--bg-card-subtle)] border border-[var(--border-subtle)] transition-colors cursor-pointer"
-              title={`Current theme: ${theme} (Click to toggle)`}
-              aria-label="Toggle theme mode"
+              title={`${t.common.toggleTheme}: ${theme}`}
+              aria-label={t.common.toggleTheme}
             >
               {theme === 'system' ? (
                 <Laptop className="w-4 h-4" />
@@ -181,14 +181,14 @@ export const Navbar: React.FC = () => {
             <button
               onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
               className="p-2 rounded-md bg-[var(--bg-card-subtle)] border border-[var(--border-subtle)] text-theme-primary"
-              aria-label="Toggle theme"
+              aria-label={t.common.toggleTheme}
             >
               {resolvedTheme === 'dark' ? <Moon className="w-4 h-4 text-cyan-400" /> : <Sun className="w-4 h-4 text-amber-500" />}
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-lg text-theme-primary hover:bg-[var(--bg-card-subtle)] focus:outline-none"
-              aria-label="Toggle Menu"
+              aria-label={t.common.toggleMenu}
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>

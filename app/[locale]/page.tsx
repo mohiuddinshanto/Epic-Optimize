@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { ReferenceDesignPage } from '../../components/sections/ReferenceDesignPage';
+import { AgencyLandingPage } from '../../components/sections/AgencyLandingPage';
 
 interface PageProps {
   params: Promise<{
@@ -18,10 +18,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const isBangla = locale === 'bn';
   const title = isBangla
-    ? 'এপিক অপটিমাইজ | ঢাকা, বাংলাদেশে ওয়েব ডেভেলপমেন্ট, SEO ও ডিজিটাল মার্কেটিং'
+    ? 'এপিক অপটিমাইজ | ঢাকা, বাংলাদেশে ওয়েব উন্নয়ন, SEO ও ডিজিটাল বিপণন'
     : 'Epic Optimize | Web Development, SEO & Digital Marketing in Dhaka';
   const description = isBangla
-    ? 'এপিক অপটিমাইজ ঢাকাভিত্তিক ডিজিটাল এজেন্সি। আমরা বিশ্বব্যাপী ব্যবসার জন্য ওয়েব ও সফটওয়্যার ডেভেলপমেন্ট, SEO, ডিজিটাল বিজ্ঞাপন এবং ব্র্যান্ড পরিচিতি তৈরি করি।'
+    ? 'এপিক অপটিমাইজ ঢাকাভিত্তিক একটি ডিজিটাল এজেন্সি। আমরা বিশ্বজুড়ে ব্যবসার জন্য ওয়েব ও সফটওয়্যার উন্নয়ন, SEO, ডিজিটাল বিজ্ঞাপন এবং ব্র্যান্ড পরিচিতি গড়ে তুলি।'
     : 'Epic Optimize is a Dhaka, Bangladesh digital agency delivering web and software development, SEO, digital advertising, and brand identity for businesses worldwide.';
 
   return {
@@ -55,5 +55,5 @@ export default async function LocalizedPage({ params }: PageProps) {
     notFound();
   }
 
-  return <ReferenceDesignPage locale={locale} />;
+  return <AgencyLandingPage />;
 }

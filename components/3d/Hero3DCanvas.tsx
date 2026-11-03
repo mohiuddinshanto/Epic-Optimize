@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { useTheme } from '../../context/ThemeContext';
+import { useLocale } from '../../context/LocaleContext';
 
 export const Hero3DCanvas: React.FC = () => {
   const mountRef = useRef<HTMLDivElement>(null);
   const { resolvedTheme } = useTheme();
+  const { t } = useLocale();
   const [hasWebGL, setHasWebGL] = useState<boolean>(true);
   const [reducedMotion, setReducedMotion] = useState<boolean>(false);
 
@@ -425,7 +427,7 @@ export const Hero3DCanvas: React.FC = () => {
     <div
       ref={mountRef}
       className="w-full h-full min-h-[420px] md:min-h-[520px] pointer-events-auto cursor-grab active:cursor-grabbing transition-opacity duration-700"
-      aria-label="Interactive 3D Abstract Geometry Hero"
+      aria-label={t.common.heroCanvas}
       role="img"
     />
   );

@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { useTheme } from '../../context/ThemeContext';
+import { useLocale } from '../../context/LocaleContext';
 
 export const DhakaGlobe3D: React.FC = () => {
   const mountRef = useRef<HTMLDivElement>(null);
   const { resolvedTheme } = useTheme();
+  const { t } = useLocale();
   const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
@@ -231,7 +233,7 @@ export const DhakaGlobe3D: React.FC = () => {
       <div className="w-full h-full flex items-center justify-center">
         <div className="w-32 h-32 rounded-full border border-cyan-500/30 bg-cyan-500/5 flex items-center justify-center relative">
           <div className="w-4 h-4 rounded-full bg-cyan-400 shadow-lg shadow-cyan-500" />
-          <span className="absolute -bottom-6 text-[11px] font-mono text-cyan-500">Dhaka • 23.81° N</span>
+          <span className="absolute -bottom-6 text-[11px] font-mono text-cyan-500">{t.common.dhakaLocation} • 23.81° N</span>
         </div>
       </div>
     );
@@ -242,7 +244,7 @@ export const DhakaGlobe3D: React.FC = () => {
       <div ref={mountRef} className="w-[260px] h-[260px]" />
       <div className="absolute bottom-1 px-3 py-1 rounded-full bg-[var(--bg-card)]/90 border border-[var(--border-subtle)] shadow-sm text-[11px] font-mono text-cyan-500 backdrop-blur-sm pointer-events-none flex items-center gap-1.5">
         <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-        <span>Dhaka, BD (23.81° N, 90.41° E)</span>
+        <span>{t.common.dhakaLocation} (23.81° N, 90.41° E)</span>
       </div>
     </div>
   );

@@ -143,7 +143,7 @@ export const ServicesSection: React.FC = () => {
                         <button
                           onClick={() => handleConsultService(service.title)}
                           className="p-2 rounded-lg text-theme-muted hover:text-cyan-500 transition-colors cursor-pointer"
-                          aria-label={`Consult for ${service.title}`}
+                          aria-label={`${t.common.consultFor} ${service.title}`}
                         >
                           <ArrowUpRight className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                         </button>

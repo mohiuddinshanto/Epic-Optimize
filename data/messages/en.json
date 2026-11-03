@@ -1,4 +1,24 @@
 {
+  "common": {
+    "navigation": "Navigation",
+    "directContact": "Direct Contact",
+    "emailInquiry": "Email Inquiry",
+    "whatsappCall": "WhatsApp & Direct Call",
+    "officeAddress": "Office Address",
+    "scrollToTop": "Scroll to top",
+    "toggleTheme": "Toggle theme",
+    "toggleMenu": "Toggle menu",
+    "switchToEnglish": "Switch to English",
+    "switchToBangla": "Switch to Bangla",
+    "closeDialog": "Close dialog",
+    "enterpriseStandard": "Enterprise Standard",
+    "liveShowcase": "Live showcase",
+    "availableForProjects": "Available for new projects",
+    "doNotFill": "Leave this field empty",
+    "consultFor": "Consult about",
+    "dhakaLocation": "Dhaka, Bangladesh",
+    "heroCanvas": "Interactive 3D abstract geometry"
+  },
   "nav": {
     "services": "Services",
     "process": "Process",
@@ -155,6 +175,12 @@
     "subtitle": "Tell us about your project, goals, and timeline. We'll review and respond with concrete next steps.",
     "responseTimePlaceholder": "[EDITABLE NOTE] Typical response time: Within 12-24 hours on business days (Dhaka Time, GMT+6).",
     "form": {
+      "validation": {
+        "name": "Please provide your full name (at least 2 characters).",
+        "email": "Please provide a valid email address.",
+        "service": "Please choose a primary service.",
+        "message": "Please share a brief project summary (at least 10 characters)."
+      },
       "nameLabel": "Your Name",
       "namePlaceholder": "e.g., Alex Rahman",
       "emailLabel": "Email Address",

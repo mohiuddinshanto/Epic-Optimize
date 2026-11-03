@@ -36,7 +36,7 @@ export const Footer: React.FC = () => {
                 </span>
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 dark:bg-emerald-500/20 dark:text-emerald-300 dark:border-emerald-500/30">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-                  <span>Available for Q4/Q1</span>
+                  <span>{t.common.availableForProjects}</span>
                 </span>
               </div>
               <p className="text-xs font-semibold text-cyan-700 dark:text-cyan-400 uppercase tracking-wider">
@@ -46,14 +46,14 @@ export const Footer: React.FC = () => {
                 {t.footer.description}
               </p>
               <div className="pt-2 text-xs text-theme-muted font-mono">
-                {companyInfo.address}, {companyInfo.city} {companyInfo.postalCode}, {companyInfo.country}
+                {t.contact.direct.address}
               </div>
             </div>
 
             {/* Quick Links */}
             <div className="md:col-span-3 space-y-3">
               <p className="text-xs font-semibold text-theme-primary uppercase tracking-wider">
-                Navigation
+                {t.common.navigation}
               </p>
               <ul className="space-y-2 text-sm">
                 <li>
@@ -98,17 +98,17 @@ export const Footer: React.FC = () => {
             {/* Direct Connect & Testing Helpers */}
             <div className="md:col-span-4 space-y-4">
               <p className="text-xs font-semibold text-theme-primary uppercase tracking-wider">
-                Direct Contact
+                {t.common.directContact}
               </p>
               <div className="text-sm space-y-1.5">
                 <p>
-                  <span className="text-theme-muted">Email: </span>
+                  <span className="text-theme-muted">{t.common.emailInquiry}: </span>
                   <a href={`mailto:${companyInfo.email}`} className="text-theme-secondary hover:text-cyan-500">
                     {companyInfo.email}
                   </a>
                 </p>
                 <p>
-                  <span className="text-theme-muted">WhatsApp: </span>
+                  <span className="text-theme-muted">{t.contact.direct.whatsappLabel}: </span>
                   <a
                     href={companyInfo.whatsappUrl}
                     target="_blank"
@@ -150,8 +150,8 @@ export const Footer: React.FC = () => {
               <button
                 onClick={scrollToTop}
                 className="p-2 rounded-lg bg-[var(--bg-card-subtle)] hover:bg-[var(--border-subtle)] text-theme-secondary hover:text-theme-primary transition-colors cursor-pointer transform hover:-translate-y-0.5 active:translate-y-0"
-                title="Scroll to top"
-                aria-label="Scroll to top"
+                title={t.common.scrollToTop}
+                aria-label={t.common.scrollToTop}
               >
                 <ArrowUp className="w-4 h-4" />
               </button>

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useRef, useState } from 'react';
+import { useLocale } from '../../context/LocaleContext';
 
 interface DepthCardProps {
   icon: React.ReactNode;
@@ -17,6 +18,7 @@ export const DepthCard: React.FC<DepthCardProps> = ({
   className = '',
   maxTilt = 10,
 }) => {
+  const { t } = useLocale();
   const cardRef = useRef<HTMLDivElement>(null);
   const [tilt, setTilt] = useState({ rx: 0, ry: 0, active: false });
 
@@ -63,7 +65,7 @@ export const DepthCard: React.FC<DepthCardProps> = ({
 
       <div className="pt-6 mt-4 border-t border-[var(--border-subtle)] flex items-center gap-2 text-xs font-semibold text-cyan-600 dark:text-cyan-400">
         <span className="w-1.5 h-1.5 rounded-full bg-cyan-500" />
-        <span>Enterprise Standard</span>
+        <span>{t.common.enterpriseStandard}</span>
       </div>
     </div>
   );

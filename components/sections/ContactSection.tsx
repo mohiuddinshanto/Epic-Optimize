@@ -24,16 +24,16 @@ export const ContactSection: React.FC = () => {
   const validateForm = () => {
     const errors: Record<string, string> = {};
     if (!formData.name.trim() || formData.name.trim().length < 2) {
-      errors.name = 'Please provide your full name (at least 2 characters).';
+      errors.name = t.contact.form.validation.name;
     }
     if (!formData.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
-      errors.email = 'Please provide a valid email address.';
+      errors.email = t.contact.form.validation.email;
     }
     if (!formData.service) {
-      errors.service = 'Please choose a primary service.';
+      errors.service = t.contact.form.validation.service;
     }
     if (!formData.message.trim() || formData.message.trim().length < 10) {
-      errors.message = 'Please share a brief project summary (at least 10 characters).';
+      errors.message = t.contact.form.validation.message;
     }
     setFieldErrors(errors);
     return Object.keys(errors).length === 0;
@@ -74,7 +74,7 @@ export const ContactSection: React.FC = () => {
         });
       } else {
         setStatus('error');
-        setErrorMessage(result.error || t.contact.form.errorDesc);
+        setErrorMessage(t.contact.form.errorDesc);
       }
     } catch {
       setStatus('error');
@@ -123,7 +123,7 @@ export const ContactSection: React.FC = () => {
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-xs font-medium text-theme-muted uppercase tracking-wider">Email Inquiry</p>
+                  <p className="text-xs font-medium text-theme-muted uppercase tracking-wider">{t.common.emailInquiry}</p>
                   <a
                     href={`mailto:${companyInfo.email}`}
                     className="text-base font-semibold text-theme-primary hover:text-cyan-500 transition-colors"
@@ -139,7 +139,7 @@ export const ContactSection: React.FC = () => {
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-xs font-medium text-theme-muted uppercase tracking-wider">WhatsApp & Direct Call</p>
+                  <p className="text-xs font-medium text-theme-muted uppercase tracking-wider">{t.common.whatsappCall}</p>
                   <a
                     href={companyInfo.whatsappUrl}
                     target="_blank"
@@ -166,9 +166,9 @@ export const ContactSection: React.FC = () => {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-xs font-medium text-theme-muted uppercase tracking-wider">Office Address</p>
+                  <p className="text-xs font-medium text-theme-muted uppercase tracking-wider">{t.common.officeAddress}</p>
                   <p className="text-sm font-medium text-theme-primary mt-0.5 leading-relaxed">
-                    {companyInfo.address}, {companyInfo.city} {companyInfo.postalCode}, {companyInfo.country}
+                    {t.contact.direct.address}
                   </p>
                 </div>
               </div>
@@ -210,7 +210,7 @@ export const ContactSection: React.FC = () => {
                 <form onSubmit={handleSubmit} className="space-y-5">
                   {/* Honeypot field */}
                   <div className="hidden" aria-hidden="true">
-                    <label htmlFor="hp_company_url">Do not fill this</label>
+                    <label htmlFor="hp_company_url">{t.common.doNotFill}</label>
                     <input
                       type="text"
                       id="hp_company_url"
@@ -342,9 +342,9 @@ export const ContactSection: React.FC = () => {
                         } focus:outline-none`}
                       >
                         <option value="">{t.contact.form.serviceDefault}</option>
-                        {serviceList.map((s) => (
+                        {serviceList.map((s, index) => (
                           <option key={s} value={s}>
-                            {s}
+                            {t.services.items[index]?.title ?? s}
                           </option>
                         ))}
                       </select>

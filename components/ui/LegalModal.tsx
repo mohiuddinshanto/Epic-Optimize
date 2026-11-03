@@ -40,7 +40,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ type, onClose }) => {
           <button
             onClick={onClose}
             className="p-2 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
-            aria-label="Close dialog"
+            aria-label={t.common.closeDialog}
           >
             <X className="w-5 h-5" />
           </button>
@@ -50,7 +50,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ type, onClose }) => {
         <div className="py-6 text-sm text-slate-600 dark:text-slate-300 leading-relaxed whitespace-pre-line space-y-4 max-h-[60vh] overflow-y-auto">
           <p>{content}</p>
           <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 text-xs text-slate-500 dark:text-slate-400">
-            <strong>Epic Optimize</strong> • Orbit Mustakim Tower, Jatrabari, Dhaka 1236, Bangladesh
+            <strong>Epic Optimize</strong> • {t.contact.direct.address}
           </div>
         </div>
 
