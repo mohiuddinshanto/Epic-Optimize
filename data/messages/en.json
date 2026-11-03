@@ -79,6 +79,7 @@
     "badge": "Methodology",
     "title": "A Transparent, Predictable 5-Step Process",
     "subtitle": "How we take ideas from discovery to measurable impact with clear milestones.",
+    "phaseLabel": "Phase",
     "steps": [
       {
         "number": "01",
@@ -113,6 +114,102 @@
     "subtitle": "Explore our live demos, client productions, and technical capabilities on our dedicated showcase platform.",
     "cta": "Browse Our Work",
     "url": "https://work.epicoptimize.com"
+  },
+  "page": {
+    "hero": {
+      "brandLayer": "Brand",
+      "codeLayer": "Code",
+      "webLayer": "Web",
+      "seoLayer": "SEO",
+      "adsLayer": "Ads",
+      "learnMore": "Learn more"
+    },
+    "consultLabels": [
+      "Consult for Custom Software Development",
+      "Consult for Web Development",
+      "Consult for SEO",
+      "Consult for Digital Advertising",
+      "Consult for Digital Marketing",
+      "Consult for Brand Identity"
+    ],
+    "console": {
+      "compiled": "compiled successfully",
+      "ready": "ready on localhost:3000"
+    },
+    "services": [
+      {
+        "title": "Custom Software Development",
+        "description": "Full-stack web applications, dashboards, internal tools, and APIs, from database to interface, built around how your business actually works."
+      },
+      {
+        "title": "Web Development",
+        "description": "Fast, responsive business websites and online stores on Next.js, React, or WordPress, built for speed, search, and conversion."
+      },
+      {
+        "title": "Search Engine Optimization (SEO)",
+        "description": "Technical search architecture, keyword clustering, and on-page optimization designed to capture high-intent search traffic organically."
+      },
+      {
+        "title": "Digital Advertising",
+        "description": "Targeted ad campaigns across Meta, Google, TikTok, YouTube, LinkedIn and more, optimized for direct customer acquisition and measurable ROI."
+      },
+      {
+        "title": "Digital Marketing",
+        "description": "Full-funnel digital marketing strategies, conversion rate optimization (CRO), and content frameworks that nurture prospects into long-term customers."
+      },
+      {
+        "title": "Brand Identity",
+        "description": "Distinct visual identities, logo marks, typographic systems, and digital style guides that build instant credibility in competitive markets."
+      }
+    ],
+    "serviceTags": {
+      "technicalSeo": "Technical SEO",
+      "onPageSeo": "On-Page SEO",
+      "coreWebVitals": "Core Web Vitals",
+      "structuredData": "Structured Data",
+      "metaAds": "Meta Ads",
+      "googleAds": "Google Ads",
+      "tiktokAds": "TikTok Ads",
+      "youtubeAds": "YouTube Ads",
+      "linkedinAds": "LinkedIn Ads",
+      "snapchatAds": "Snapchat Ads",
+      "pinterestAds": "Pinterest Ads",
+      "retargeting": "Retargeting",
+      "conversionTracking": "Conversion Tracking",
+      "growthStrategy": "Growth Strategy",
+      "cro": "CRO",
+      "funnelOptimization": "Funnel Optimization",
+      "analytics": "Analytics",
+      "visualSystems": "Visual Systems",
+      "logoDesign": "Logo Design",
+      "styleGuides": "Style Guides",
+      "assetKits": "Asset Kits",
+      "ecommerce": "E-commerce"
+    },
+    "work": {
+      "stageHint": "Drag to rotate • Click the tabs",
+      "tabs": ["Web", "Software", "SEO", "Ads"]
+    },
+    "codeMotto": "Grow Smarter. Go Epic.",
+    "codeComment": "ship it",
+    "contact": {
+      "globeCaption": "Dhaka Studio • 23.7104° N, 90.4074° E",
+      "serviceOptions": [
+        "Custom Software Development",
+        "Web Development",
+        "SEO (Search Engine Optimization)",
+        "Digital Advertising",
+        "Digital Marketing",
+        "Brand Identity"
+      ],
+      "sendWhatsApp": "Send on WhatsApp",
+      "sendEmail": "Send by email",
+      "availability": "Available for Q4/Q1"
+    },
+    "footer": {
+      "emailLabel": "Email:",
+      "whatsappLabel": "WhatsApp:"
+    }
   },
   "whyUs": {
     "badge": "Why Epic Optimize",
@@ -174,6 +271,8 @@
     "title": "Let's Build Something Exceptional Together",
     "subtitle": "Tell us about your project, goals, and timeline. We'll review and respond with concrete next steps.",
     "responseTimePlaceholder": "[EDITABLE NOTE] Typical response time: Within 12-24 hours on business days (Dhaka Time, GMT+6).",
+    "protocolTitle": "International Working Protocol",
+    "protocolDescription": "Whether you are in North America, the UK, Europe, Australia, or the Gulf, our Dhaka team structures daily async updates, milestones, and video handoffs around your business hours.",
     "form": {
       "validation": {
         "name": "Please provide your full name (at least 2 characters).",
@@ -195,6 +294,7 @@
       "sending": "Sending Inquiry...",
       "successTitle": "Message Received!",
       "successDesc": "Thank you for reaching out. We will review your project brief and get back to you shortly.",
+      "sendAnother": "Send another inquiry",
       "errorTitle": "Unable to send message",
       "errorDesc": "Please try again or email us directly at epicoptimize@gmail.com."
     },
