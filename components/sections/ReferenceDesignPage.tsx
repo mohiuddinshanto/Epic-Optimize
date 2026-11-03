@@ -2,13 +2,9 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import Script from 'next/script';
 import { messagesData } from '../../data/company';
+import { referenceHtml } from '../../data/epicOptimizeMarkup';
 
 type TranslationTree = string | TranslationTree[] | { [key: string]: TranslationTree };
-
-const referenceHtml = readFileSync(
-  path.join(process.cwd(), 'data', 'epic-optimize-design.html'),
-  'utf8',
-);
 
 const styles = referenceHtml.match(/<style\b[^>]*>([\s\S]*?)<\/style>/i)?.[1] ?? '';
 const bodyMarkup = referenceHtml.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? '';
