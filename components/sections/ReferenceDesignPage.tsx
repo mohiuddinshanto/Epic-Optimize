@@ -7,6 +7,31 @@ import { referenceHtml } from '../../data/epicOptimizeMarkup';
 type TranslationTree = string | TranslationTree[] | { [key: string]: TranslationTree };
 
 const styles = referenceHtml.match(/<style\b[^>]*>([\s\S]*?)<\/style>/i)?.[1] ?? '';
+const responsiveHeaderStyles = `
+  /* Keep the brand lockup intact on narrow screens. */
+  .nav-container { min-width: 0; gap: 0.75rem; }
+  .brand-logo-link { flex: 0 0 auto; min-width: max-content; }
+  .nav-actions { flex: 0 0 auto; margin-left: auto; }
+  .mobile-nav-controls { flex: 0 0 auto; gap: 0.35rem; }
+  .mobile-menu-btn { flex: 0 0 2.5rem; min-width: 2.5rem; min-height: 2.5rem; }
+  .brand-logo-img { flex: 0 0 2.5rem; }
+  .brand-text { flex: 0 0 auto; min-width: max-content; }
+  .brand-name, .brand-tagline { white-space: nowrap; }
+
+  @media (max-width: 380px) {
+    .nav-container { height: 4.5rem; gap: 0.5rem; }
+    .brand-logo-link { flex: 1 1 auto; min-width: 0; gap: 0.45rem; }
+    .brand-logo-img { width: 2.125rem; height: 2.125rem; flex: 0 0 2.125rem; }
+    .brand-text { flex: 1 1 auto; min-width: 0; }
+    .brand-name { font-size: 0.95rem; white-space: nowrap; }
+    .brand-tagline { max-width: 8.5rem; font-size: 0.55rem; line-height: 1.2; letter-spacing: 0.04em; white-space: normal; }
+    .mobile-nav-controls { gap: 0.25rem; }
+    .mobile-menu-btn { flex-basis: 2.25rem; min-width: 2.25rem; min-height: 2.25rem; padding: 0.35rem; }
+    .mobile-menu-btn svg { width: 1.35rem; height: 1.35rem; }
+    .mobile-nav-controls .theme-toggle-btn { width: 2.25rem; height: 2.25rem; flex: 0 0 2.25rem; }
+    .mobile-nav-controls .lang-btn { padding-inline: 0.4rem; }
+  }
+`;
 const bodyMarkup = referenceHtml.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? '';
 const inlineScript = bodyMarkup.match(/<script\b[^>]*>([\s\S]*?)<\/script>/i)?.[1] ?? '';
 const englishMarkup = bodyMarkup.replace(/\s*<script\b[^>]*>[\s\S]*?<\/script>\s*/i, '');
@@ -121,7 +146,7 @@ export function ReferenceDesignPage({ locale = 'en' }: { locale?: 'en' | 'bn' })
 
   return (
     <>
-      <style dangerouslySetInnerHTML={{ __html: styles }} />
+      <style dangerouslySetInnerHTML={{ __html: `${styles}\n${responsiveHeaderStyles}` }} />
       <div dangerouslySetInnerHTML={{ __html: renderedMarkup }} />
       <Script
         id="epic-optimize-interactions"
